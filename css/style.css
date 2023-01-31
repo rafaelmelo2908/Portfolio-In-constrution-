@@ -1,0 +1,225 @@
+
+
+body {
+    color:#d1d1d1;
+    background:#1d1d20;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+
+
+
+.link-logo {
+    
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+   
+}
+
+
+.content {
+    display: flex;
+    padding: 0px 10px 0 0;
+    text-align: right;
+
+}
+
+.logo {
+    width: 150px;
+    padding: 0 0 20px;
+}
+
+.logo:hover{
+    filter: drop-shadow(1px 1px 5px white);
+}
+
+.links {
+    width: 60px;
+    padding: 10px;
+}
+
+.links:hover {
+    width: 63px;
+}
+
+.social-links {
+    text-decoration: none;
+}
+
+.social-links:hover {
+    filter: drop-shadow(1px 1px 3px white);
+}
+
+
+.main-container {
+    
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 100px;
+  
+    
+}
+
+
+.card {
+    padding: 30px;
+    border-radius: 30px;
+    background: #1d1d20;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    display: inline-block;        
+    justify-content: center;  
+    width: 100%;  
+    height: 100%;
+   
+    max-width: 500px;       
+}
+
+.card:hover {
+    box-shadow: 0 0 5px rgb(0,140,255),
+                    0 0 25px rgb(0,140,255),
+                    0 0 50px rgb(0,140,255),
+                    0 0 100px rgb(0,140,255);
+      
+}
+
+.card-2 {
+    
+    padding: 30px;
+    border-radius: 30px;
+    background: #1d1d20;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+    justify-content: center;  
+    width: 100%;  
+    height: 100%;
+   
+    max-width: 300px;       
+}
+
+.card-2:hover {
+    box-shadow: 0 0 5px rgb(0,140,255),
+                    0 0 25px rgb(0,140,255),
+                    0 0 50px rgb(0,140,255),
+                    0 0 100px rgb(0,140,255);
+      
+}
+
+h1 {
+    font-size: 40px;
+    text-align: justify;
+    font-weight: 600;
+    margin: 30px;
+    position: relative;   
+}
+
+h2 {
+    font-size: 30px;
+    text-align: justify;
+    font-weight: 600;
+    margin: 0 30px 30px 30px;
+    position: relative;   
+}
+
+
+
+p{
+    text-align: justify;
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight:bold;
+    line-height: 1.6;
+    position: relative;
+}
+
+/*--------------------external-bord----*/
+
+* {
+	box-sizing: border-box;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+
+
+p {
+	margin: 0;
+}
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+.wrapper {
+	min-width: min(40rem, 100%);
+}
+
+.box {
+	font-size: 3vw;
+	margin: max(1rem, 3vw);
+	border: 0.35rem solid;
+	padding: 3vw;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+    
+}
+
+.box:nth-child(2) {
+	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+	animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
