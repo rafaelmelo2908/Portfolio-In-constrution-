@@ -20,9 +20,8 @@ body {
 
 .spinner {
   position: absolute;
-  top:0%;
+  top: 0%;
   left: 28px;
-  
 }
 
 .content {
@@ -90,19 +89,50 @@ body {
 }
 
 .card-2 {
-  padding: 30px;
-  border-radius: 30px;
+  width: 300px;
+  height: 254px;
+  border-radius: 20px;
   background: #1d1d20;
+  display: flex;
+  gap: 5px;
+  padding: 0.4em;
   box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-
-  max-width: 600px;
 }
 
+.card-2 p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.5s;
+  background: #1d1d20;
+  border: 1px solid #d1d1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.social  {
+.card-2 p:hover {
+  flex: 4;
+}
+
+.card-2 p span {
+  min-width: 14em;
+  padding: 0.5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
+  text-transform: uppercase;
+  color: #d1d1d1;
+  letter-spacing: 0.1em;
+}
+
+.card-2 p:hover span {
+  transform: rotate(0);
+}
+
+.social {
   font-size: min(30px, 5vw);
   justify-content: space-around;
   list-style: none;
@@ -119,13 +149,12 @@ body {
 }
 
 .sites:hover {
-  font-size: min(35px, 5vw);
+  font-size: min(15px, 5vw);
   box-shadow: 0 0 5px rgb(0, 140, 255), 0 0 25px rgb(0, 140, 255),
     0 0 50px rgb(0, 140, 255), 0 0 100px rgb(0, 140, 255);
   transition: 1s;
-  border-radius: 20px;
+  border-radius: 15px;
 }
-
 
 h1 {
   font-size: max(50px, 5vw);
