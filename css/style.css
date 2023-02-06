@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body {
   color: #d1d1d1;
   background: #1d1d20;
@@ -52,6 +59,13 @@ body {
   gap: 100px;
 }
 
+.conj-prim-card {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+}
+
 .card {
   padding: 30px;
   border-radius: 30px;
@@ -59,10 +73,7 @@ body {
   box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
   display: inline-block;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-
-  max-width: 500px;
+ 
 }
 
 .card:hover {
@@ -90,35 +101,37 @@ body {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: max(50px, 5vw);
   text-align: justify;
   font-weight: 600;
   margin: 30px;
   position: relative;
+
+  
 }
 
 h2 {
-  font-size: 30px;
+  font-size: min(40px, 10vw);
   text-align: justify;
   font-weight: 600;
   margin: 0 30px 30px 30px;
   position: relative;
 }
 
+
+
 p {
   text-align: justify;
-  margin-left: 30px;
   font-size: 15px;
   font-weight: bold;
   line-height: 1.6;
   position: relative;
+  margin: 0;
 }
 
 /*--------------------external-bord----*/
 
-* {
-  box-sizing: border-box;
-}
+
 
 @property --angle {
   syntax: "<angle>";
@@ -138,9 +151,6 @@ p {
   inherits: true;
 }
 
-p {
-  margin: 0;
-}
 
 :root {
   --d: 2500ms;
