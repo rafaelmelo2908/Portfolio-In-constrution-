@@ -10,30 +10,23 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.link-logo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
 
-.spinner {
-  position: absolute;
-  top: 0%;
-  left: 28px;
-}
-
-.content {
-  display: flex;
-  padding: 20px 10px 0 0;
-  text-align: right;
-}
-
-.logo {
-  width: 150px;
+.header {
+  overflow: hidden;
   padding: 0;
-  position: relative;
+  display:block;
+  justify-content: space-between;
+}
+
+
+.header-right {
+  float: right;
+}
+
+.header .logo {
+  width:30%;
+  max-width: 150px;
+  
 }
 
 .logo:hover {
@@ -42,9 +35,11 @@ body {
 }
 
 .links {
-  width: 60px;
+  width: 30%;
+  max-width: 55px;
   padding: 10px;
 }
+
 
 .links:hover {
   width: 63px;
@@ -152,8 +147,8 @@ body {
   font-size: min(15px, 5vw);
   box-shadow: 0 0 5px rgb(0, 140, 255), 0 0 25px rgb(0, 140, 255),
     0 0 50px rgb(0, 140, 255), 0 0 100px rgb(0, 140, 255);
-  transition: 1s;
-  border-radius: 15px;
+  transition: 3s;
+  border-radius: 20px;
 }
 
 h1 {
@@ -276,31 +271,5 @@ p {
   100% {
     --gradX: 50%;
     --gradY: 0%;
-  }
-}
-
-.spinner {
-  background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
-  width: 100px;
-  height: 100px;
-  animation: spinning82341 1.7s linear infinite;
-  text-align: center;
-  border-radius: 50px;
-  filter: blur(1px);
-  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255),
-    0px 5px 20px 0px rgb(0, 225, 255);
-}
-
-.spinner1 {
-  background-color: rgb(36, 36, 36);
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  filter: blur(10px);
-}
-
-@keyframes spinning82341 {
-  to {
-    transform: rotate(360deg);
   }
 }
