@@ -216,6 +216,8 @@ p {
 
 .wrapper {
   min-width: min(40rem, 100%);
+  max-width: 1170px;
+  margin: auto;
 }
 
 .box {
